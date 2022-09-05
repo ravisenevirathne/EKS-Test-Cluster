@@ -7,7 +7,7 @@ resource "helm_release" "web_server" {
 }
 
 
-/*
+
 
 resource "helm_release" "kubernetes-dashboard" {
   name       = "kubernetes-dashboard"
@@ -15,7 +15,6 @@ resource "helm_release" "kubernetes-dashboard" {
   chart      = "kubernetes-dashboard"
 }
 
-*/
 
 
 //kubectl patch svc kubernetes-dashboard -p '{"spec": {"type": "LoadBalancer"}}'
