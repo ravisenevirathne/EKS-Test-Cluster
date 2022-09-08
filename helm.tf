@@ -20,3 +20,5 @@ resource "helm_release" "kubernetes-dashboard" {
 //kubectl patch svc kubernetes-dashboard -p '{"spec": {"type": "LoadBalancer"}}'
 
 // kubectl patch svc kubernetes-dashboard -p '{"spec": {"type": "ClusterIP"}}'
+
+// kubectl patch svc kubernetes-dashboard -p '{"spec": {"type": "ClusterIP"}}'
