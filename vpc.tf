@@ -17,17 +17,17 @@ module "myapp-vpc" {
   enable_dns_hostnames = true
 
   tags = {
-      "kubernetes.io/cluster/test-eks-cluster" = "shared"
+      "kubernetes.io/cluster/test-eks-cluster" = "shared"   #AWS cloud controller manager to identity the our cluster
   }
 
   public_subnet_tags = {
     "kubernetes.io/cluster/test-eks-cluster" = "shared"
-    "kubernetes.io/role/elb" = 1
+    "kubernetes.io/role/elb" = 1     #Cluster to identify public subnet for provisioning public Elastic load balancer 
   }
 
   private_subnet_tags = {
       "kubernetes.io/cluster/test-eks-cluster" = "shared"
-      "kubernetes.io/role/internal-elb" = 1
+      "kubernetes.io/role/internal-elb" = 1   #Cluster to identify private subnet for provisioning private Elastic load balancer 
   }
   
 }
